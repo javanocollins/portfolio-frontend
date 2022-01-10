@@ -89,7 +89,7 @@ const HomePage = () => {
                         }}
                         options={{
                             autoStart: true,
-                            loop: true,
+                            loop: true
                         }}
                     />
                 </h1>
