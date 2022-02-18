@@ -10,66 +10,21 @@ import "./Homepage.style.css";
 
 // Packages imports
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fab, faLaravel } from "@fortawesome/free-brands-svg-icons";
+import { toolIcons } from "../../utils";
 import {
     faCheckSquare,
     faCoffee,
     faDatabase,
 } from "@fortawesome/free-solid-svg-icons";
+import Work from "../../components/Work/work.component";
+import Contact from "../../components/Contact/contact.component";
 library.add(fab, faDatabase);
 
 const HomePage = () => {
-    const toolIcons = [
-        {
-            icon: ["fab", "react"],
-            title: "React",
-            activeColor: "",
-        },
-        {
-            icon: ["fab", "vuejs"],
-            title: "Vue",
-            activeColor: "",
-        },
-        {
-            icon: ["fab", "js"],
-            title: "JavaScript",
-            activeColor: "",
-        },
-        {
-            icon: ["fab", "html5"],
-            title: "HTML5",
-            activeColor: "",
-        },
-        {
-            icon: ["fab", "css3-alt"],
-            title: "CSS3",
-            activeColor: "",
-        },
-        {
-            icon: ["fab", "python"],
-            title: "Python",
-            activeColor: "",
-        },
-        {
-            icon: ["fab", "node"],
-            title: "Node",
-            activeColor: "",
-        },
-        {
-            icon: ["fab", "fa-laravel"],
-            title: "Laravel",
-            activeColor: "",
-        },
-        {
-            icon: faDatabase,
-            title: "MySQL / MongoDB",
-            activeColor: "",
-        },
-    ];
-
     return (
         <div>
-            <header className="HomePage-header flex flex-col items-start justify-center container">
+            <header className="HomePage-header flex flex-col items-start justify-center container mx-auto">
                 <h1 className="text-7xl font-medium mb-1 flex-wrap">
                     I am Javano Collins.
                     <Typewriter
@@ -89,7 +44,7 @@ const HomePage = () => {
                         }}
                         options={{
                             autoStart: true,
-                            loop: true
+                            loop: true,
                         }}
                     />
                 </h1>
@@ -101,10 +56,19 @@ const HomePage = () => {
 
             <main>
                 <div className="px-12 bg-black h-56 flex items-center justify-around">
-                    {toolIcons.map((icon) => {
-                        return <Tool icon={icon.icon} title={icon.title} />;
+                    {toolIcons.map((icon, idx) => {
+                        return (
+                            <Tool
+                                key={idx}
+                                icon={icon.icon}
+                                title={icon.title}
+                            />
+                        );
                     })}
                 </div>
+
+                <Work />
+                <Contact />
             </main>
         </div>
     );

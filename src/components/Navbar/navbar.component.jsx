@@ -1,17 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import logo from "../../images/logo.png";
 
 const Navbar = () => {
     return (
-        <nav className="container flex items-center pt-7 gap-8">
-            <img src={logo} alt="logo" className="w-16"/>
+        <nav className="container mx-auto flex items-center pt-7 gap-8">
+            <Link to="/">
+                <img src={logo} alt="logo" className="w-16" />
+            </Link>
 
-            <ul className="flex gap-8 uppercase text-lg">
-                <li>Home</li>
-                <li>Dev Work</li>
-                <li>Design Work</li>
-            </ul>
+            {/* <ul className="flex gap-8 uppercase text-lg">
+                <Link to="/dev-work">Dev Work</Link>
+                <Link to="/design-work">Design Work</Link>
+            </ul> */}
         </nav>
     );
 };
