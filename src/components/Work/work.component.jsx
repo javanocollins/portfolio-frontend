@@ -6,8 +6,8 @@ const Work = () => {
     const [tab, setTab] = useState(1);
 
     return (
-        <div className="container mx-auto flex flex-col justify-center items-center py-10">
-            <div className="flex mb-5">
+        <div className="container mx-auto flex flex-col justify-center items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 mb-5">
                 <a
                     className={`${
                         tab === 1 ? "text-orange-600 font-black" : ""

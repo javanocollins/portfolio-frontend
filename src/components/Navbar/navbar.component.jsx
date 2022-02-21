@@ -5,7 +5,7 @@ import logo from "../../images/logo.png";
 
 const Navbar = () => {
     return (
-        <nav className="container mx-auto flex items-center pt-7 gap-8">
+        <nav className="container mx-auto flex px-10 items-center pt-7 gap-8">
             <Link to="/">
                 <img src={logo} alt="logo" className="w-16" />
             </Link>

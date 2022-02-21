@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import logo1 from "../..//images/logos/logo-1.png";
 import logo2 from "../..//images/logos/logo-2.png";
 import logo3 from "../..//images/logos/logo-3.png";
@@ -25,13 +24,22 @@ const DesignWork = () => {
     ];
 
     const style = {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 350px)'
-    }
+        display: "grid",
+        gridTemplateColumns: "repeat(3, 350px)",
+    };
     return (
-        <div className={`grid grid-cols-3 row-gap-8 gap-y-12 gap-9 mt-12`}>
+        <div
+            className={`
+            grid grid-cols-1
+            lg:grid-cols-3 
+            md:grid-cols-2 
+            md:row-gap-8 
+            md:gap-y-12 
+            md:gap-9 
+            mt-12`}
+        >
             {logos.map((img, idx) => (
-                <img className="w-96" src={img} />
+                <img className="md:w-96" src={img} />
             ))}
         </div>
     );

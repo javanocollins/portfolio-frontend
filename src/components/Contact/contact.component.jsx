@@ -2,19 +2,22 @@ import React from "react";
 
 const Contact = () => {
     return (
-        <div className="container mx-auto grid grid-cols-2">
+        <div className="container mx-auto flex flex-col justify-center items-center">
             <div>
-                <h2 className="text-5xl font-medium">Contact</h2>
-                <p>I'm much easier to reach on Instagram</p>
+                <h2 className="text-5xl font-medium text-white mb-8">
+                    Contact
+                </h2>
+                <p className="text-2xl">
+                    I'm much easier to reach on Instagram and LinkedIn
+                </p>
 
                 <div>
-                    <p>javanocollins@gmail.com</p>
+                    <p className="text-2xl">javanocollins@gmail.com</p>
                 </div>
                 <div>
-                    <p>+1242 803 7736</p>
+                    <p className="text-2xl">+1242 803 7736</p>
                 </div>
             </div>
-            <div>Hello</div>
         </div>
     );
 };

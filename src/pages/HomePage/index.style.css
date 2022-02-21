@@ -1,0 +1,17 @@
+.HomePage-header {
+    height: 90vh;
+}
+
+.info-section {
+    background-color: #d33003;
+}
+
+@media screen and (max-width: 1024px) {
+    .Typewriter {
+        display: none;
+    }
+
+    .Tools {
+        display: none;
+    }
+}
