@@ -5,6 +5,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { fab, faFigma, faLaravel } from "@fortawesome/free-brands-svg-icons";
 
+
+
 export const toolIcons = [
     {
         icon: ["fab", "react"],
@@ -57,4 +59,3 @@ export const toolIcons = [
         activeColor: "",
     },
 ];
-

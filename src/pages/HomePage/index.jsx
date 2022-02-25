@@ -20,14 +20,15 @@ import {
 import Work from "../../components/Work/work.component";
 import Contact from "../../components/Contact/contact.component";
 import About from "../../components/About/about.componen";
+import Experience from "../../components/Experience/experience.component";
 library.add(fab, faDatabase);
 
 const HomePage = () => {
     return (
         <div>
             <header className="HomePage-header flex flex-col px-10 items-start justify-center container mx-auto">
-                <h1 className="text-7xl font-medium mb-1 flex-wrap">
-                    I am Javano Collins.
+                <div className="flex text-7xl font-medium mb-1 flex-wrap">
+                    <h1 className="">I am Javano Collins.&nbsp;</h1>
                     <Typewriter
                         className="Typewriter"
                         onInit={(typewriter) => {
@@ -49,7 +50,7 @@ const HomePage = () => {
                             loop: true,
                         }}
                     />
-                </h1>
+                </div>
 
                 <p className="mb-3">I specialize in Web Development.</p>
 
@@ -69,12 +70,21 @@ const HomePage = () => {
                     })}
                 </div>
 
-                <div className="work-section mx-auto flex flex-col justify-center lg:grid-cols-2 items-center py-20">
+                <div className="work-section mx-auto flex flex-col justify-center lg:grid-cols-2 items-start md:p-20">
+                    <Experience />
+                </div>
+
+                <div className="work-section mx-auto flex flex-col justify-start lg:grid-cols-2 items-start md:p-20">
                     <Work />
                 </div>
-                <div className="info-section mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-start py-20 px-10">
-                    <Contact />
-                    <About />
+
+                <div className="info-section mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-center md:p-20 p-10">
+                    <div className="w-full mx-auto flex flex-col justify-center items-start mb-10">
+                        <Contact />
+                    </div>
+                    <div className="mx-auto flex flex-col justify-center items-start">
+                        <About />
+                    </div>
                 </div>
             </main>
         </div>

@@ -1,38 +1,13 @@
 import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faGithub,
-    faLinkedin,
-    faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { socialIcons } from "../../utils";
+import Socials from "../Socials/socials.component";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear()
-
-    console.log(currentYear);
-    const icons = [
-        { icon: faGithub, link: "https://github.com/JavanoCollins" },
-        {
-            icon: faLinkedin,
-            link: "https://www.linkedin.com/in/javano-collins/",
-        },
-        { icon: faInstagram, link: "https://www.instagram.com/javanocollins/" },
-    ];
+    const currentYear = new Date().getFullYear();
     return (
         <div className="mx-auto flex flex-col items-center justify-center px-20 py-24 bg-gray-900">
-            <div className="text-white text-4xl mb-4">
-                {icons.map((icon, idx) => (
-                    <a
-                        key={idx}
-                        className="px-2 mx-1"
-                        href={icon.link}
-                        target="_blank"
-                    >
-                        <FontAwesomeIcon icon={icon.icon} />
-                    </a>
-                ))}
-            </div>
+            <Socials />
             <p className="text-xl text-white">
                 Javano Collins &copy; {currentYear}
             </p>
