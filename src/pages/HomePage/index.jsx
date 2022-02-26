@@ -78,13 +78,9 @@ const HomePage = () => {
                     <Work />
                 </div>
 
-                <div className="info-section mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-center md:p-20 p-10">
-                    <div className="w-full mx-auto flex flex-col justify-center items-start mb-10">
-                        <Contact />
-                    </div>
-                    <div className="mx-auto flex flex-col justify-center items-start">
-                        <About />
-                    </div>
+                <div className="info-section grid grid-cols-1 lg:grid-cols-2 gap-x-20 md:p-20 p-10 justify-center">
+                    <About />
+                    <Contact />
                 </div>
             </main>
         </div>

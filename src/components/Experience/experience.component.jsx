@@ -15,22 +15,24 @@ const Experience = () => {
                 Experience
             </h2>
 
-            <div className="flex">
+            <div className="grid grid-cols-2 justify-between">
                 <ul>
-                    <li className="cursor-pointer" onClick={() => setTab(1)}>
+                    <li
+                        className="cursor-pointer text-xl font-medium text-orange-600 mb-2"
+                        onClick={() => setTab(1)}
+                    >
                         Plato Alpha Design
                     </li>
-                    <li className="cursor-pointer" onClick={() => setTab(2)}>
+                    <li
+                        className="cursor-pointer text-xl font-medium text-orange-600 mb-2"
+                        onClick={() => setTab(2)}
+                    >
                         Think Simple
                     </li>
                 </ul>
 
-                {tab === 1 && (
-                    <Company company={"Plato Alpha"} job_title={job_title} />
-                )}
-                {tab === 2 && (
-                    <Company company={"Think Simple"} job_title={job_title} />
-                )}
+                {tab === 1 && <Company company={work_places[0].company} />}
+                {tab === 2 && <Company company={"Think Simple"} />}
             </div>
         </>
     );
