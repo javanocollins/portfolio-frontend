@@ -29,8 +29,7 @@ const Experience = () => {
                     >
                         Think Simple
                     </li>
-                </ul>
-
+                </ul>   
                 {tab === 1 && <Company company={work_places[0].company} />}
                 {tab === 2 && <Company company={"Think Simple"} />}
             </div>
