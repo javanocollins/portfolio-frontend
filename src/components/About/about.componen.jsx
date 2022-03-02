@@ -22,8 +22,7 @@ const About = () => {
                             history, stem)
                         </li>
                         <li className="text-2xl mb-5">
-                            I love marine science and I self-proclaim to be an
-                            advocate for environmental health. An additional
+                            I love marine science and a self-proclaimed for environmental health. An additional
                             passion of mine lies in applying technology to
                             marine science to save the ocean.
                         </li>
